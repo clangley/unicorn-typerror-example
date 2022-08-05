@@ -2,7 +2,7 @@
 name = "unicorn-typeerror-js"
 version = "0.1.0"
 description = ""
-authors = ["Chris Langley <chriswlangley@outlook.com>"]
+authors = []
 
 [tool.poetry.dependencies]
 python = "^3.10"
