@@ -1,0 +1,20 @@
+<!-- row.html -->
+{% load unicorn %}
+<div>
+  <p>
+    {% if is_editing %}
+    <input type="text" unicorn:keyup.enter="save" unicorn:model.defer="todo.title" />
+    {% unicorn_errors %}
+    {% else %}
+    {{ todo.title }}
+    {% endif %}
+  </p>
+  <p>
+    {% if is_editing %}
+    <button unicorn:click="save" unicorn:partial.key="{{ todo.pk }}">Save</button>
+    <button unicorn:click.discard="cancel" unicorn:partial.key="{{ todo.pk }}">Cancel</button>
+    {% else %}
+    <button unicorn:click="edit" unicorn:partial.key="{{ todo.pk }}">Edit</button>
+    {% endif %}
+  </p>
+</div>

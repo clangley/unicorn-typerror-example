@@ -1,0 +1,7 @@
+<!-- queryset.html -->
+{% load unicorn %}
+<div>
+    {% for todo in todos %}
+        {% unicorn 'edit_todo' todo=todo key=todo.id %}
+    {% endfor %}
+</div>

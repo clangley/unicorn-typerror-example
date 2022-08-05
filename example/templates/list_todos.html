@@ -1,0 +1,17 @@
+{% load static %}
+{% load unicorn %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODOS</title>
+    {% unicorn_scripts %}
+</head>
+<body>
+{% unicorn_errors %}
+{% csrf_token %}
+<h3>UNICORN!</h3>
+{% unicorn 'list_todos' %}
+</body>
+</html>
+
